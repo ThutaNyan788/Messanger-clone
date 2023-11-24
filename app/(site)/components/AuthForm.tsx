@@ -10,6 +10,7 @@ import Input from '@/app/(site)/components/inputs/Input';
 import Button from '@/app/(site)/components/Button';
 import AuthSocialButton from './AuthSocialButton';
 import { BsGithub, BsGoogle } from 'react-icons/bs'
+import axios from 'axios';
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -44,6 +45,7 @@ const AuthForm = () => {
 
         if (variant === 'REGISTER') {
             //TODO:Axios Register
+            axios.post('/api/register',data);
         }
 
         if (variant === 'LOGIN') {
